@@ -11,7 +11,7 @@ export default registerAs(
     password: process.env.DB_PASSWORD,
     database: process.env.DB_DATABASE,
     entities: [__dirname + '/../**/*.entity{.ts,.js}'],
-    synchronize: process.env.NODE_ENV !== 'production', // solo en dev
+    synchronize: true, // solo en dev
     autoLoadEntities: true,
   }),
 );
