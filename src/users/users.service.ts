@@ -36,7 +36,7 @@ export class UsersService {
 
     return this.reviewRepository.find({
       where: { user: { id: userId } },
-      relations: ['book'],
+      relations: ['book', 'user'],
       order: { createdAt: 'DESC' },
     });
   }

@@ -44,7 +44,7 @@ export class BooksService {
   async findOne(id: string): Promise<BookDetailResponseDto> {
   const book = await this.bookRepository.findOne({
     where: { id },
-    relations: ['reviews'],
+    relations: ['reviews', 'reviews.user'],
   });
 
   if (!book) {
